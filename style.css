@@ -36,11 +36,17 @@ h1,h2,h3,h4,h5,h6,p {
     gap: 10px;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
 }
+
 
 .header {
     padding: 20px 0;
@@ -176,13 +182,13 @@ h1,h2,h3,h4,h5,h6,p {
 
 .action .left {
     position: absolute;
-    left: 20px;
+    left: 0px;
     bottom: 40px;
 }
 
 .action .right {
     position: absolute;
-    right: 20px;
+    right: 0px;
     top: 40px;
 }
 
@@ -227,4 +233,126 @@ h1,h2,h3,h4,h5,h6,p {
 
 .swiper-slide img {
     display: flex;
+}
+
+.action__inner {
+    position: relative;
+    z-index: 400;
+}
+
+
+@media screen and (max-width: 1300px) {
+    .container {
+        max-width: 900px;
+    }
+    .info__inner b {
+        font-size: 25px;
+    }
+    
+    .info__inner p {
+        font-size: 20px;
+    }
+    .action__inner table {
+        font-size: 42px;
+    }
+    .locations__inner p {
+        font-size: 20px;
+    }
+
+    .about__inner img {
+        width: 50%;
+    } 
+
+    .footer {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .action .left {
+        left: -100px;
+    }
+    
+    .action .right {
+        right: -100px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .container {
+        max-width: 700px;
+    }
+    
+    .action .left {
+        display: none;
+    }
+    
+    .action .right {
+        display: none;
+    }
+    .action__inner table td:first-child {
+        padding-left: 0;
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    .container {
+        max-width: 700px;
+        padding: 0 5%;
+    }
+    .locations__inner p {
+        width: 100%;
+        margin: 20px;
+    }
+
+    .locations__inner {
+        padding: 60px 0;
+    }
+
+    .about__inner {
+        flex-direction: column;
+        padding: 80px 5%;
+    } 
+
+    .action__inner table {
+        margin-left: 20px;
+        font-size: 20px;
+    }
+
+    .action__inner {
+        padding: 60px 0;
+    }
+    .action__inner table td {
+        padding: 10px 30px;
+    }
+
+    .info__inner {
+        flex-direction: column;
+        padding: 40px 5%;
+    }
+
+    .hero__inner img {
+        width: 80%;
+    }
+
+    .header {
+        flex-direction: column;
+        gap: 20px;
+        padding: 30px 5%;
+    }
+
+    .swiper {
+        width: 100%;
+    
+    }
+    .men__inner img {
+        max-width: 400px !important;
+    }
+
+    .footer {
+        
+        padding-bottom: 40px;
+    }
+
 }
